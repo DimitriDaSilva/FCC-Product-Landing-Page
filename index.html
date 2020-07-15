@@ -39,11 +39,14 @@
           id="top-image"
         />
 
-        <a href="#features"><div class="arrow-down"></div></a>
+        <div class="arrow-down"></div>
       </section>
       <section id="features">
         <div class="feature-item">
-          <img src="img/brick.svg" alt="bricks" class="color-flaticon" />
+          <div id="flaticon-div">
+            <img src="img/brick.svg" alt="bricks" class="flaticon" />
+            <div id="background-flaticon"></div>
+          </div>
           <h2 class="title-features">Premium Materials</h2>
           <p class="description-item">
             Our trombones use the shiniest brass which is sourced locally. This
@@ -51,7 +54,10 @@
           </p>
         </div>
         <div class="feature-item">
-          <img src="img/truck.svg" alt="truck" class="color-flaticon" />
+          <div id="flaticon-div">
+            <img src="img/truck.svg" alt="truck" class="flaticon" />
+            <div id="background-flaticon"></div>
+          </div>
           <h2 class="title-features">Fast Shipping</h2>
           <p class="description-item">
             We make sure you recieve your trombone as soon as we have finished
@@ -59,7 +65,10 @@
           </p>
         </div>
         <div class="feature-item">
-          <img src="img/shield.svg" alt="shield" class="color-flaticon" />
+          <div id="flaticon-div">
+            <img src="img/shield.svg" alt="shield" class="flaticon" />
+            <div id="background-flaticon"></div>
+          </div>
           <h2 class="title-features">Quality Assurance</h2>
           <p class="description-item">
             For every purchase you make, we will ensure there are no damages or
@@ -68,15 +77,14 @@
         </div>
       </section>
       <section id="howItWorks">
-        <div id="block-color"></div>
-        <img src="img/youtube.svg" alt="youtube-logo" id="youtube-logo" />
-        <p id="description-video">
-          See for yourself the quality of our product
-        </p>
+        <div id="text">
+          <img src="img/youtube.svg" alt="youtube-logo" id="youtube-logo" />
+          <p id="description-video">
+            See for yourself the quality of our product
+          </p>
+        </div>
         <iframe
           id="video"
-          width="560"
-          height="315"
           src="https://www.youtube.com/embed/y8Yv4pnO7qc"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -85,61 +93,68 @@
       </section>
       <section id="pricing">
         <div class="pricing-model">
-          <h2 class="category">TENOR TROMBONE</h2>
+          <h2 class="category">Tenor trombone</h2>
+          <p class="category-description">
+            Lorem ipsum<br />
+            Lorem ipsum<br />
+            Lorem ipsum dolor<br />
+            Lorem ipsum<br />
+          </p>
           <p class="price">$600</p>
+          <button class="btn-select">Select</button>
+        </div>
+        <div class="pricing-model">
+          <h2 class="category">Bass trombone</h2>
           <p class="category-description">
             Lorem ipsum<br />
             Lorem ipsum<br />
             Lorem ipsum dolor<br />
             Lorem ipsum<br />
           </p>
-          <button id="btn-select">Select</button>
-        </div>
-        <div class="pricing-model">
-          <h2 class="category">BASS TROMBONE</h2>
           <p class="price">$900</p>
-          <p class="category-description">
-            Lorem ipsum<br />
-            Lorem ipsum<br />
-            Lorem ipsum dolor<br />
-            Lorem ipsum<br />
-          </p>
-          <button id="btn-select">Select</button>
+          <button class="btn-select">Select</button>
         </div>
         <div class="pricing-model">
-          <h2 class="category">VALVE TROMBONE</h2>
-          <p class="price">$1,200</p>
+          <h2 class="category">Valve trombone</h2>
           <p class="category-description">
             Lorem ipsum<br />
             Lorem ipsum<br />
             Lorem ipsum dolor<br />
             Lorem ipsum<br />
           </p>
-          <button id="btn-select">Select</button>
+          <p class="price">$1,200</p>
+          <button class="btn-select">Select</button>
         </div>
       </section>
       <section id="get-started">
-        <p>Convinced?</p>
+        <img
+          src="img/trumpet-outdoor.jpg"
+          alt="trumpet-outdoor"
+          id="image-trumpet-outdoor"
+        />
         <p>
+          <strong>Convinced?</strong><br />
           Get started by sending us your email and we'll reach out as soon as
           possible
         </p>
-        <form action="" id="form">
-          <input
-            type="email"
-            id="email"
-            required
-            placeholder="louis.armstrong@gmail.com"
-          />
-        </form>
-        <button id="btn-get-started">Get Started</button>
+        <div id="email-input">
+          <form action="" id="form">
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="louis.armstrong@gmail.com"
+            />
+          </form>
+          <button id="btn-get-started">Get Started</button>
+        </div>
       </section>
     </main>
     <footer>
       <ul>
-        <li>Privacy</li>
-        <li>Terms</li>
-        <li>Contact</li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
       <p>
         Copyright &copy 2020, Original Trombones
