@@ -18,6 +18,16 @@ body {
   width: 100%;
   background-color: #d5ded9;
   z-index: 1;
+  overflow: hidden;
+}
+
+#black-rectangle {
+  background-color: black;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 30rem;
 }
 
 #header-img {
@@ -42,25 +52,7 @@ body {
   width: 100%;
   text-align: center;
   color: black;
-}
-
-#nav-bar li a:hover::before {
-  content: " ";
-  position: absolute;
-  width: 3rem;
-  height: 0.05rem;
-  background: white;
-  margin-left: -3.5rem;
-  margin-top: 0.8rem;
-}
-#nav-bar li a:hover::after {
-  content: " ";
-  position: absolute;
-  width: 3rem;
-  height: 0.05rem;
-  background: white;
-  margin-left: 0.5rem;
-  margin-top: 0.8rem;
+  position: relative;
 }
 
 .nav-link {
@@ -95,19 +87,19 @@ body {
 @-webkit-keyframes arrow {
   0%,
   100% {
-    top: 80%;
+    top: 75%;
   }
   50% {
-    top: 90%;
+    top: 85%;
   }
 }
 @keyframes arrow {
   0%,
   100% {
-    top: 80%;
+    top: 75%;
   }
   50% {
-    top: 90%;
+    top: 85%;
   }
 }
 
@@ -115,44 +107,42 @@ body {
   margin-top: 9.1rem;
   background-color: black;
   color: white;
+  position: relative;
 }
 
 #top h1 {
   margin: 0 2rem;
-  padding-top: 2.4rem;
+  position: relative;
+  top: 20px;
 }
 
 #top p {
   margin: 5rem 2rem 0 4rem;
+  position: relative;
   /* padding-bottom: 0; */
 }
 
 #top p::before {
   content: "";
+  display: inline-block;
   position: absolute;
-  margin-top: 0.3rem;
   margin-left: -1rem;
-  width: 0.5rem;
-  height: 5.7rem;
+  width: 0.4rem;
+  height: 100%;
   background-color: white;
-}
-
-#features {
-  margin-top: 2rem;
-}
-
-.feature-item {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 3rem;
 }
 
 #top img {
   position: relative;
   top: 0.41em;
   object-fit: cover;
+  object-position: 0px 100%;
   height: 200px;
-  width: 500px;
+  width: 100%;
+}
+
+#features {
+  margin: 2rem 0;
 }
 
 #flaticon-div {
@@ -198,9 +188,11 @@ body {
 
 #text {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-#howItWorks p {
+#description-video {
   margin: 2rem;
   margin-left: 0;
 }
@@ -282,6 +274,9 @@ body {
 
 #image-trumpet-outdoor {
   width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: 100% 100%;
 }
 
 #get-started p {
@@ -289,26 +284,29 @@ body {
   margin: 1rem 10%;
 }
 
-#email-input {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 90%;
-  margin: auto;
+#form {
+  display: block;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 #get-started input {
   border-radius: 2px;
   border: 1px solid rgb(212, 212, 212);
   padding: 0.3rem;
+  width: 100%;
+  margin: auto;
 }
 
-#get-started button {
+.btn-get-started {
   border-radius: 2px;
   border: none;
   padding: 0.3rem;
   cursor: pointer;
   background-color: #ebebeb;
   font-weight: bold;
+  width: 100%;
+  margin-top: 0.7rem;
 }
 
 #get-started button:hover {
@@ -344,4 +342,156 @@ footer p {
   padding: 0.5rem;
 }
 
-/* @media; */
+@media (max-width: 630px) {
+  #nav-bar li a:hover::before {
+    content: " ";
+    position: absolute;
+    width: 3rem;
+    height: 0.05rem;
+    background: black;
+    margin-left: -3.5rem;
+    margin-top: 0.8rem;
+  }
+
+  #nav-bar li a:hover::after {
+    content: " ";
+    position: absolute;
+    width: 3rem;
+    height: 0.05rem;
+    background: black;
+    margin-left: 0.5rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (min-width: 630px) {
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  #header-img {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #nav-bar {
+    width: 60%;
+  }
+
+  nav ul li {
+    display: inline-block;
+    float: right;
+    padding: 0 5%;
+  }
+
+  #nav-bar ul {
+    margin-top: 0;
+  }
+
+  #nav-bar li a:hover::before {
+    content: " ";
+    position: absolute;
+    width: 80%;
+    height: 0.05rem;
+    background: black;
+    margin-left: 10%;
+    margin-top: 1.5rem;
+  }
+
+  #top {
+    margin-top: 6rem;
+  }
+
+  #black-rectangle {
+    height: 10rem;
+  }
+
+  #top img {
+    position: relative;
+    top: 0.41em;
+    left: 40%;
+    object-fit: cover;
+    object-position: 0px 100%;
+    height: 200px;
+    width: 615.2px;
+  }
+}
+
+@media (max-width: 950px) {
+  .feature-item {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .feature-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 950px) {
+  #features {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .feature-item {
+    padding: 0 2%;
+  }
+
+  #howItWorks {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+  }
+
+  #youtube-logo,
+  #description-video {
+    margin: 0;
+    height: 50%;
+  }
+
+  #youtube-logo {
+    width: 30%;
+  }
+
+  #video {
+    padding: 0;
+    margin: 2rem 2rem 2rem 0;
+    width: 50%;
+  }
+
+  #pricing {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .pricing-model {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #get-started {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #get-started p,
+  #email-input {
+    width: 40%;
+    margin: 2rem 0;
+  }
+}

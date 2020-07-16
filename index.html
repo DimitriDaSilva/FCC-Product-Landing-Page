@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css\style.css" />
   </head>
   <body>
+    <div id="black-rectangle"></div>
     <header id="header">
       <img
         src="img/original_trombones.png"
@@ -16,9 +17,9 @@
 
       <nav id="nav-bar">
         <ul>
-          <li class="nav-link"><a href="#features">Features</a></li>
-          <li class="nav-link"><a href="#howItWorks">How It Works</a></li>
-          <li class="nav-link"><a href="#pricing">Pricing</a></li>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#howItWorks">How It Works</a></li>
+          <li><a class="nav-link" href="#pricing">Pricing</a></li>
         </ul>
       </nav>
     </header>
@@ -138,15 +139,22 @@
           possible
         </p>
         <div id="email-input">
-          <form action="" id="form">
+          <form action="https://www.freecodecamp.com/email-submit" id="form">
             <input
               type="email"
               id="email"
               required
               placeholder="louis.armstrong@gmail.com"
+              name="email"
+            />
+            <input
+              type="submit"
+              id="submit"
+              class="btn-get-started"
+              value="Get Started"
             />
           </form>
-          <button id="btn-get-started">Get Started</button>
+          <!-- <button type="submit" form" id="btn-get-started">Get Started</button> -->
         </div>
       </section>
     </main>
@@ -160,5 +168,6 @@
         Copyright &copy 2020, Original Trombones
       </p>
     </footer>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
   </body>
 </html>
